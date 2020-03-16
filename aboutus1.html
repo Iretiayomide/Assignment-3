@@ -5,139 +5,81 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="stylesheet" type="text/css" href="./css/main.css">
-
-<style>
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-.column {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
-}
-
-.about-section {
-  padding: 50px;
-  text-align: center;
-  background-color: #474e5d;
-  color: white;
-}
-
-.container {
-  padding: 0 16px;
-}
-
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.title {
-  color: grey;
-}
-
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
-
-.button:hover {
-  background-color: #555;
-}
-
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
-</style>
 </head>
 <body>
 
-<div class="topnav">
+ <div class="header">
+    <h1>ABOUT US</h1>
+    <p>We are Business Analytics and Information Systems graduate students at the University of South Florida, Tampa. We are passionate about safety and how we can harness the power of Technology to ensure safety.</p>
+    <a href="https://github.com/Iretiayomide/Assignment-3" target="_blank">Github Project Link</a>
+  </div>
+
+<div class="navbar">
   <a class ="active" href="home1.html">Home</a>
   <a href="data.html">Access Areas</a>
   <a href="aboutus1.html">About Us</a>
 </div>
 
-
-  <div class="main">
-  <h1>ABOUT US</h1>
-  <p>We are Business Analytics and Information Systems graduate students at the University of South Florida, Tampa. We are passionate about safety and how we can harness the power of Technology to ensure safety.</p>
-  </div>
-
 <h2 style="text-align:center">Meet Our Team</h2>
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="CopyforWebsite.jpg" height = 500 width = 500>
+      <img src="CopyforWebsite.jpg" class="profile-pic">
       <div class="container">
-        <h2>Iretioluwa Bamgbala</h2>
-        <p>Ireti has about 2 years of experience working as a business analyst, gathering functional business requirements and bridging the gap between technical and business teams.Ireti worked on creating and designing the website.</p>
-        <p>iretioluwa@mail.usf.edu</p>
-        <a href="https://github.com/iretiayomide">Git</a>
-        <p><button class="button">Contact</button></p>
+        <div class = "profile-details"> 
+          <h2>Iretioluwa Bamgbala</h2>
+          <p>Ireti has about 2 years of experience working as a Business Analyst, gathering functional business requirements and bridging the gap between technical and business teams.Ireti worked on creating and designing the website.</p>
+          <p>iretioluwa@mail.usf.edu</p>
+        </div>
+        <div class="bottom-btns">
+          <button class="button github-button" onclick="javascript:window.open('https://github.com/iretiayomide')">Git</button>
+          <button class="button contact-button">Contact</button>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="column">
     <div class="card">
-      <img src="Leighann.jpg" height = 500 width = 500>
+      <img src="Leighann.jpg"class="profile-pic">
       <div class="container">
-        <h2>Leighann Irving</h2>
-       <p>Leighann has more than 2 years of experience working as a data analyst where she mined data and created visualizations.Leighann worked on sourcing for the dataset and ensuring it was compatible with API.</p>
-        <p>irvingl@mail.usf.edu</p>
-       <a href="https://github.com/leighirving">Git</a>
-        <p><button class="button">Contact</button></p>
+       <div class = "profile-details"> 
+          <h2>Leighann Irving</h2>
+          <p>Leighann has more than 2 years of experience working as a Data Analyst where she mined data and created visualizations.Leighann worked on sourcing the dataset and helping to design the website.</p>
+          <p>irvingl@mail.usf.edu</p>
+        </div>
+        <div class="bottom-btns">
+          <button class = "button github-button" onclick="javascript:window.open('https://github.com/leighirving')">Git</button>
+          <button class="button contact-button">Contact</button>
+      </div>
       </div>
     </div>
   </div>
   
   <div class="column">
     <div class="card">
-      <img src="Rajitha.jpg" height = 500 width = 500>
+      <img src="Rajitha.jpg" class ="profile-pic">
       <div class="container">
-        <h2>Rajitha Pandiniboyini</h2>
-        <p>Rajitha worked on creating the data model that was used for the project.</p>
-        <p>rajithap@mail.usf.edu</p>
-        <a href="https://github.com/rajithap88">Git</a>
-        <p><button class="button">Contact</button></p>
+        <div class = "profile-details"> 
+          <h2>Rajitha Pandiniboyini</h2>
+          <p>Rajitha has about 7 years of experience working as a Business Analyst, Developer, and Software Engineer. She worked on creating the data model that was used for the project.</p>
+          <p>rajithap@mail.usf.edu</p>
+        </div>
+        <div class="bottom-btns">
+          <button class ="button github-button" onclick="javascript:window.open('https://github.com/rajithap88')">Git</button>
+          <button class="button contact-button">Contact</button>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 
-<h3> Database Model</h3>
-<div class="content">
-<img src="datamodel.jpg" height=500 width=700>
+<div class="data-model">
+    <h3 style="width: 100%; text-align: center;"> Database Model</h3>
+    <div class="content">
+      <img src="datamodel.jpg" height=700 width=900>
+    </div>
 </div>
 
 
