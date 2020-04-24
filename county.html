@@ -53,87 +53,49 @@ tr:nth-child(even){background-color: #f2f2f2}
 <body>
 
   <div class="navbar">
-    <a class="active" href="home1.html">Home</a>
-    <a href="data.html">Access Areas</a>
+    <a class="active" href="home.html">Home</a>
+    <a href="data1.html">Access Areas</a>
     <a href="county.html">SearchbyCounty</a>
-    <a href="aboutus1.html">About Us</a>
+    <a href="about-us.html">About Us</a>
 </div>
-
 
 
 <h2>FISHING ACCESS AREAS  </h2>
 
-<p>The table below provides public access to waters in Vermont for shore fishing opportunities and launching of water craft. The data was sourced from https://www.geodata.vermont.gov/.</p>
+<h2>Search/Filter Dropdown</h2>
+<p>Click on the button to open the dropdown menu, and use the input field to search for a specific dropdown link.</p>
 
+<div class="dropdown">
+  
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="data2">Orleans</a>
+    <a href="data3">Rutland</a>
+    
+  </div>
+</div>
 
-<div style="overflow-x:auto;">
+<script>
+/* When the user clicks on the button,toggle between hiding and showing the dropdown content */
 
-  <table>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
 
-    <tr>
-       <th>id</th>
-      <th>WaterBody</th>
-      <th>Town</th>
-      <th>County</th>
-      <th>Owner</th>
-      <th>Manager</th>
-      <th>AccessType</th>
-      <th>BoatSize</th>
-      <th>RampType</th>
-      <th>UniversalAccess</th>
-    </tr>
-
-    <tr>
-      <td>1</td>
-      <td>Brownington Pond</td>
-      <td>Brownington</td>
-      <td>Orleans</td>
-      <td>F&W</td>
-      <td>F&W</td>
-      <td>Boating/Fishing</td>
-      <td>Medium</td>
-      <th>Concrete Plank</th>
-      <th>No</th>
-    </tr>
-
-<tr>
-      <td>3</td>
-      <td>Barton River</td>
-      <td>Glover</td>
-      <td>Orleans</td>
-      <td>F&W</td>
-      <td>F&W</td>
-      <td>Fishing</td>
-      <td>N/A</td>
-      <th>None</th>
-      <th>No</th>
-    </tr>
-
-
-
-<tr>
-      <td>8</td>
-      <td>Clark's Pond</td>
-      <td>Glover</td>
-      <td>Orleans</td>
-      <td>F&W</td>
-      <td>F&W</td>
-      <td>Boating/Fishing</td>
-      <td>Small</td>
-      <th>Gravel</th>
-      <th>No</th>
-    </tr>
-
-
-<tr>
-      <td>10</td>
-      <td>Clyde River</td>
-      <td>Charleston</td>
-      <td>Orleans</td>
-      <td>F&W</td>
-      <td>F&W</td>
-      <td>Boating/Fishing</td>
-      <td>Small</td>
-      <th>Gravel</th>
-      <th>No</th>
-    </tr>
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+ 
